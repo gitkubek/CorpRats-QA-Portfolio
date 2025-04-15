@@ -1,0 +1,21 @@
+# Build artifacts
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+*.sln
+*.vcxproj*
+*.opensdf
+*.sdf
+*.log
+*.suo
+*.user
+*.userprefs
+
+# Mac stuff
+.DS_Store
+
+# UE5 autosaves and logs
+Autosaves/
+Backup/
