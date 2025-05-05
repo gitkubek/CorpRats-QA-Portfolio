@@ -1,6 +1,6 @@
 ﻿# CorpRats - QA Portfolio Project (Simulating GameDev Workflow)
 
-## 🚀 Project Goal
+# Project Goal
 
 This repository is part of a comprehensive portfolio project designed to showcase professional Quality Assurance (QA) skills within a simulated, realistic Game Development workflow utilizing industry-standard tools and practices. The goal is to demonstrate capabilities in test planning, execution, automation, CI/CD integration, infrastructure management, and process documentation, aiming for a high standard of technical proficiency.
 
@@ -17,7 +17,7 @@ This repository is part of a comprehensive portfolio project designed to showcas
 
 ---
 
-## 🧱 Architecture Overview
+# Architecture Overview
 
 The project utilizes a secure cloud infrastructure hosted on AWS (eu-north-1 region):
 
@@ -36,7 +36,7 @@ The project utilizes a secure cloud infrastructure hosted on AWS (eu-north-1 reg
 
 ---
 
-## ⚙️ Technology Stack
+# Technology Stack
 
 * **Game Engine:** Unreal Engine 5 (using C++)
 * **Version Control:** Perforce Helix Core (P4D - Self-hosted on EC2) | Git (Public mirror via `git-p4`)
@@ -51,7 +51,7 @@ The project utilizes a secure cloud infrastructure hosted on AWS (eu-north-1 reg
 
 ---
 
-## 📋 QA Workflow & Processes (Current & Planned)
+# QA Workflow & Processes (Current & Planned)
 
 * **Version Control:**
     * *Primary:* Perforce (`//corp_rats-depot/`) hosts all project files, including large UE assets (`/Content`).
@@ -70,7 +70,7 @@ The project utilizes a secure cloud infrastructure hosted on AWS (eu-north-1 reg
 
 ---
 
-## Repository Contents
+# Repository Contents
 
 This Git repository serves as a public mirror of the primary Perforce depot, excluding large binary assets and transient logs. You will find:
 
@@ -86,7 +86,7 @@ The `/Content/` directory containing Unreal Engine assets (.uasset, .umap) and l
 
 ---
 
-## 🧭 How to Explore
+# How to Explore
 
 * **Infrastructure as Code:** (Planned) Terraform code defining the AWS infrastructure will be located in `/iac/`.
 * **Unit Tests:** C++ test code can be found in `/Tests/UnitTests/` (or similar path within `/Source/`).
@@ -95,7 +95,7 @@ The `/Content/` directory containing Unreal Engine assets (.uasset, .umap) and l
 
 ---
 
-## 💡 Skills Demonstrated
+# Skills Demonstrated
 
 This project showcases proficiency and practical experience in:
 
@@ -115,7 +115,7 @@ This project showcases proficiency and practical experience in:
 
 ---
 
-## 🚀 Next Steps / Future Plans
+# Next Steps / Future Plans
 
 The immediate next steps focus on establishing the core QA processes and starting test automation within a CI/CD framework:
 
