@@ -1,0 +1,109 @@
+{
+  "info": {
+    "name": "CorpRats Paczkomaty – Full Mock Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Parcel",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/parcel",
+          "host": [ "{{base_url}}" ],
+          "path": [ "parcel" ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"parcelId\": \"{{parcelId}}\",\n  \"recipient\": {\n    \"name\": \"Jakub Swiderski\",\n    \"email\": \"jakub@testmail.com\",\n    \"phone\": \"+48123456789\"\n  },\n  \"status\": \"READY_FOR_PICKUP\"\n}"
+        }
+      },
+      "response": [
+        {
+          "name": "Create Parcel - Success",
+          "originalRequest": {
+            "method": "POST",
+            "url": {
+              "raw": "{{base_url}}/parcel",
+              "host": [ "{{base_url}}" ],
+              "path": [ "parcel" ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "body": "{\n  \"parcelId\": \"{{parcelId}}\",\n  \"pickupCode\": \"966284\",\n  \"status\": \"READY_FOR_PICKUP\",\n  \"createdAt\": \"2025-08-18T10:12:34.219Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Parcel Status (Picked Up)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "\\\"{{base_url}}/parcel/{{parcelId}}/status\\\",",
+          "host": [ "{{base_url}}" ],
+          "path": [ "parcel", "{{parcelId}}", "status" ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"PICKED_UP\"\n}"
+        }
+      },
+      "response": [
+        {
+          "name": "Update Status – Success",
+          "originalRequest": {
+            "method": "PUT",
+            "url": {
+              "raw": "{{base_url}}/parcel/{{parcelId}}/status",
+              "host": [ "{{base_url}}" ],
+              "path": [ "parcel", "{{parcelId}}", "status" ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"parcelId\": \"{{parcelId}}\",\n  \"status\": \"PICKED_UP\",\n  \"lastStatusChangeAt\": \"2025-08-18T11:10:45.213Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Parcel Status",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/parcel/{{parcelId}}/status",
+          "host": [ "{{base_url}}" ],
+          "path": [ "parcel", "{{parcelId}}", "status" ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Parcel Status – PICKED_UP",
+          "originalRequest": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/parcel/{{parcelId}}/status",
+              "host": [ "{{base_url}}" ],
+              "path": [ "parcel", "{{parcelId}}", "status" ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "body": "{\n  \"parcelId\": \"{{parcelId}}\",\n  \"status\": \"PICKED_UP\",\n  \"pickupCode\": null,\n  \"lastStatusChangeAt\": \"2025-08-18T11:10:45.213Z\"\n}"
+        }
+      ]
+    }
+  ]
+}

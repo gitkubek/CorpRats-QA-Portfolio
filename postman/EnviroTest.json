@@ -1,0 +1,15 @@
+{
+  "name": "CorpRats_MOCK_ENV",
+  "values": [
+    {
+      "key": "base_url",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "parcelId",
+      "value": "5237361d-bb73-4b3d-8f2c-0eb0206c5923",
+      "enabled": true
+    }
+  ]
+}
